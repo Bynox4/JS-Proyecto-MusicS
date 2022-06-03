@@ -1,22 +1,31 @@
 //menu
-document.querySelector(".action").addEventListener("click", () =>{
+document.querySelector(".action").addEventListener("click", (e) =>{
+    document.querySelector(".menu").classList.toggle("show");
+    
+});
+document.querySelector(".action2").addEventListener("click", (e) =>{
     document.querySelector(".menu").classList.toggle("show");
 });
 
-let prueba1 = document.querySelector("#link");
-let prueba2 = document.querySelector("#link1");
-let prueba3 = document.querySelector("#link2");
-let prueba4 = document.querySelector("#link3");
-let prueba5 = document.querySelector("#link4");
-let prueba6 = document.querySelector("#link5");
+document.querySelector(".all").addEventListener("click", (e) =>{
+    document.getElementById("mus").style.visibility = "visible";
+    document.getElementById("mus").style.display = "flex";
+})
 
-let previous = document.querySelector("#pre");
-let play = document.querySelector("#play");
-let next = document.querySelector("#next");
-let title = document.querySelector("#title");
-let slider = document.querySelector("#duration_slider");
-let track_image = document.querySelector("#img");
-let auto_play = document.querySelector("#play");
+let prueba1 = document.getElementById("link");
+let prueba2 = document.getElementById("link1");
+let prueba3 = document.getElementById("link2");
+let prueba4 = document.getElementById("link3");
+let prueba5 = document.getElementById("link4");
+let prueba6 = document.getElementById("link5");
+
+let previous = document.getElementById("pre");
+let play = document.getElementById("play");
+let next = document.getElementById("next");
+let title = document.getElementById("title");
+let slider = document.getElementById("duration_slider");
+let track_image = document.getElementById("img");
+let auto_play = document.getElementById("play");
 
 let time = document.querySelector(".end");
 
@@ -26,11 +35,10 @@ let Playing_song = false;
 
 
 
-
 let track = document.querySelector('audio');
-// Canciones list
 
-let All_song = [
+// Canciones list
+const All_song = [
     {
         name: "Brindemos",
         path: "/ArchivosMusic/BRINDEMOS_MASTER_FINAL_1.1.mp3",
@@ -127,7 +135,7 @@ function playsong(){
 
 
 //pause song
- function pausesong(){
+function pausesong(){
     track.pause();
     Playing_song = false;
     play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
@@ -170,9 +178,9 @@ function change_duration(){
 // función de reproducción automática
 function autoplay_switch(){
 	if (autoplay==1){
-       autoplay = 0;
+        autoplay = 0;
 	}else{
-       autoplay = 1;
+        autoplay = 1;
 	}
 }
 

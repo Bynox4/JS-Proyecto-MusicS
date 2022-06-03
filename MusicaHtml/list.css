@@ -88,10 +88,10 @@ a{
 }
 
 .list__cancion__duration, .list__cancion__num, .list__cancion__date {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: 'Zen Kurenaido', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zen Kurenaido', sans-serif;
 }
 
 
@@ -106,12 +106,18 @@ img{
     max-width: 100%;
 }
 
+#mus{
+    visibility: hidden;
+    display: none;
+}
+
 .container_music{
     background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin: 350px 0 250px 0;
 }
 
 .player{
@@ -309,6 +315,89 @@ a:hover{
 .menu a:hover{
     border-bottom: 1px solid white;
     
+}
+
+.button{
+    width: 5em;
+    height: 3em;
+    display: inline-flex;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    align-content: center;
+    align-items: center;
+    border:none;
+    background-color: #fff;
+    overflow: hidden;
+    
+}
+.button .icon {
+    background: #fff;
+    margin-right: 1em;
+    height: 2.2em;
+    width: 2.2em;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.5em;
+    transition: all .5s;
+}
+
+.shere {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: -8px;
+}
+
+.button:hover .icon {
+    width: calc(100% - 0.6rem);
+}
+
+.button:hover .shere {
+    width: calc(100% - 0.6rem);
+    display: none;
+}
+
+.button .icon-shere {
+    color: #000;
+    width: 1.5rem;
+    height: 2rem;
+    display: none;
+}
+
+.button:hover .icon .icon-shere {
+    display: inline-flex;
+    gap: 8px;
+
+}
+
+.contactos{
+    position: fixed;
+}
+
+.foot{
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+}
+
+.foot_content{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.foot_content a{
+    color: white;
+}
+
+.foot_content a:hover{
+    color:#2980f2
 }
 
 @media (max-width: 700px) {
