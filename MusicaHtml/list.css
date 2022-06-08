@@ -18,10 +18,17 @@ h1{
     cursor: pointer;
     z-index: 100;
     margin-top: 25px;
+    padding: 5px 8px 5px 8px;
+}
+
+.boton:hover{
+    outline: solid 1px rgb(175, 175, 175);
+
 }
 
 .menu a{
     color: white;
+    /* padding: 5px 8px 5px 8px; */
 }
 
 
@@ -378,7 +385,7 @@ a:hover{
 
 .foot{
     background-color: black;
-    height: 150px;
+    height: 200px;
     width: 100%;
     display: inline-flex;
     flex-direction: row;
